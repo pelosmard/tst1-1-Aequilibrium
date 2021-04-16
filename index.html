@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>Aequilibrium tes</title>
+
+    <script type="text/javascript" src="./scripts.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+
+<body onload="initialState()">
+    <header class="mdc-top-app-bar">
+        <div class="mdc-top-app-bar__row">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"
+                    aria-label="Open navigation menu">menu</button>
+                <span class="mdc-top-app-bar__title">Aequilibrium Part 1: The Castle Company</span>
+            </section>
+        </div>
+    </header>
+    <main class="mdc-top-app-bar--fixed-adjust">
+
+    </main>
+
+    <h3>How many heights to analyze?</h3>
+    <div id="divcount">
+        <p>Please input a number between 1 and 10:</p>
+
+        <label class="mdc-text-field mdc-text-field--filled">
+            <span class="mdc-text-field__ripple"></span>
+            <span class="mdc-floating-label" id="my-label-id">write numerical</span>
+            <input class="mdc-text-field__input" type="text" aria-labelledby="my-label-id" id="qtty">
+            <span class="mdc-line-ripple"></span>
+        </label>
+        <button class="mdc-button mdc-button--raised" onclick="countFunction('qtty')">
+            <span class="mdc-button__label">Submit</span>
+        </button>
+    </div>
+    <p id="err"></p>
+    <div id="divnums">
+        <p>Please input a number between 1 and 100, that describes a stretch of land:</p>
+        <div class="mdc-data-table">
+            <table class="mdc-data-table__table" aria-label="Dessert calories">
+                <tbody class="mdc-data-table__content">
+                    <tr class="mdc-data-table__row">
+                        <td class="mdc-data-table__cell" id="1"><input id="qtty1"></td>
+                        <td class="mdc-data-table__cell" id="2"><input id="qtty2"></td>
+                        <td class="mdc-data-table__cell" id="3"><input id="qtty3"></td>
+                        <td class="mdc-data-table__cell" id="4"><input id="qtty4"></td>
+                        <td class="mdc-data-table__cell" id="5"><input id="qtty5"></td>
+                        <td class="mdc-data-table__cell" id="6"><input id="qtty6"></td>
+                        <td class="mdc-data-table__cell" id="7"><input id="qtty7"></td>
+                        <td class="mdc-data-table__cell" id="8"><input id="qtty8"></td>
+                        <td class="mdc-data-table__cell" id="9"><input id="qtty9"></td>
+                        <td class="mdc-data-table__cell" id="10"><input id="qtty10"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div> </br>
+    <div id="divbutproc">
+        <button class="mdc-button mdc-button--raised" onclick="ExtractFldsInsArr()">
+            <span class="mdc-button__label">Process</span>
+        </button>
+    </div>
+    <div id="divresult">
+        <table class="mdc-data-table__table" aria-label="Dessert calories" id="TableRes">
+            <thead>
+                <tr class="mdc-data-table__header-row">
+                    <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Position</th>
+                    <th class="mdc-data-table__header-cell" role="columnheader"
+                        scope="col">Peak or valley</th>
+                    <th class="mdc-data-table__header-cell" role="columnheader"
+                        scope="col">height</th>
+                    <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Comments</th>
+                    <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Is castle?</th>
+                </tr>
+            </thead>
+            <tbody class="mdc-data-table__content" id="TableRes1">
+
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
